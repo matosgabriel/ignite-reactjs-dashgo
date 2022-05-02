@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import { Button, Flex, FormLabel, Stack, FormControl } from '@chakra-ui/react';
 import { Input } from '../components/Form/Input';
 
