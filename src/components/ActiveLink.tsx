@@ -12,11 +12,11 @@ export function ActiveLink({ children, shouldMatchExactlyHref = false, ...rest }
   
   let isActive = false;
 
-  if (shouldMatchExactlyHref && (asPath === rest.href.toString() || asPath === rest.as.toString())) {
+  if (shouldMatchExactlyHref && (asPath === String(rest.href) || asPath === String(rest.as))) {
     isActive = true;
   }
 
-  if (!shouldMatchExactlyHref && (asPath.startsWith(rest.href.toString()) || asPath.startsWith(rest.as.toString()))) {
+  if (!shouldMatchExactlyHref && (asPath.startsWith(String(rest.href)) || asPath.startsWith(String(rest.as)))) {
     isActive = true;
   }
 

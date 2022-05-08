@@ -11,7 +11,7 @@ export function Header() {
   
   const isWideVersion = useBreakpointValue({
     base: false,
-    large: true
+    lg: true
   });
   
   return (
@@ -32,7 +32,7 @@ export function Header() {
           fontSize="24"
           variant="unstyled"
           onClick={onOpen}
-          mr="2"
+          mr="2" 
           mt="2"
         />
       ) }

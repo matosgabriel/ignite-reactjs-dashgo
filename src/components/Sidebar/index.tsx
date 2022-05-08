@@ -7,7 +7,7 @@ export function Sidebar() {
   
   const isDrawingSidebar = useBreakpointValue({
     base: true,
-    large: false
+    lg: false
   });
 
   if (isDrawingSidebar) {
@@ -28,7 +28,7 @@ export function Sidebar() {
     );
   }
 
-  return(
+  return (
     <Box as="aside" w="64" mr="8">
       <SidebarNav />
     </Box>
