@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Button, Flex, Stack } from '@chakra-ui/react';
 import { Input } from '../components/Form/Input';
+import { useRouter } from 'next/router';
 
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -18,14 +19,17 @@ const signInFormSchema = yup.object().shape({
 });
 
 export default function SignIn() {
+  const { push } = useRouter();
+  
   const { register, handleSubmit, formState } = useForm({
     resolver: yupResolver(signInFormSchema)
   });
   
   const handleSignIn: SubmitHandler<SignInFormData> = async (values) => {
     await new Promise(resolve => setTimeout(resolve, 2000));
+    // console.log(values);
     
-    console.log(values);
+    push('dashboard');
   }
 
   return (
