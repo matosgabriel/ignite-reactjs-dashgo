@@ -8,25 +8,11 @@ import { RiAddLine, RiPencilLine } from 'react-icons/ri';
 import { Header } from '~/components/Header';
 import { Pagination } from '~/components/Pagination';
 import { Sidebar } from '~/components/Sidebar';
+import { api } from '~/services/api';
+import { useUsers } from '~/services/hooks/useUsers';
 
 export default function UserList() {
-  const { data: users, isLoading, isFetching, error } = useQuery('users', async () => {
-    const response = await fetch('http://localhost:3000/api/users');
-    const data = await response.json();
-
-    const users = data.users.map(user => ({
-      ...user,
-      createdAt: new Date(user.createdAt).toLocaleDateString('pt-BR', {
-        day: '2-digit',
-        month: 'long',
-        year: 'numeric'
-      }),
-    }));
-
-    return users;
-  }, {
-    staleTime: 1000 * 5 // 5 seconds
-  });
+  const { data: users, isLoading, isFetching, error } = useUsers();
   
   const isWideVersion = useBreakpointValue({
     base: false,
