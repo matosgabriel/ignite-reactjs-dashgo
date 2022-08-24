@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Button, Flex, Stack } from '@chakra-ui/react';
-import { Input } from '../components/Form/Input';
+import { Input } from '~/components/Form/Input';
 import { useRouter } from 'next/router';
 
 import * as yup from 'yup';

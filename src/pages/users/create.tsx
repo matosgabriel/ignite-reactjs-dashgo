@@ -1,8 +1,8 @@
 import { Box, Button, Divider, Flex, Heading, HStack, SimpleGrid, VStack } from '@chakra-ui/react';
 import Link from 'next/link';
-import { Input } from '../../components/Form/Input';
-import { Header } from '../../components/Header';
-import { Sidebar } from '../../components/Sidebar';
+import { Input } from '~/components/Form/Input';
+import { Header } from '~/components/Header';
+import { Sidebar } from '~/components/Sidebar';
 
 import { useForm, SubmitHandler } from 'react-hook-form';
 import * as yup from 'yup';
