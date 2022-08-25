@@ -73,54 +73,54 @@ export default function UserList() {
               ) : (
                 <>
                   <Table colorScheme="whiteAlpha">
-                  <Thead>
-                    <Tr>
-                      <Th px={["2", "3", "6"]} color="gray.300" width="8">
-                        <Checkbox colorScheme="pink" />
-                      </Th>
-                      <Th px={["2", "3", "6"]}>Usuários</Th>
-                      { isWideVersion && <Th>Data de cadastro</Th> }
-                      <Th width="8"></Th>
-                    </Tr>
-                  </Thead>
-                  <Tbody>
-                    { data.users.map(user => {
-                      return (
-                        <Tr key={user.id}>
-                          <Td px={["2", "3", "6"]}>
-                            <Checkbox colorScheme="pink" />
-                          </Td>
-                          <Td px={["2", "3", "6"]}>
-                            <Box>
-                              <Link color='purple.400' onMouseEnter={() => handlePrefetchUser(user.id)}>
-                                <Text fontWeight="bold">{user.name}</Text>
-                              </Link>
-                              <Text fontSize="sm" color="gray.300">{user.email}</Text>
-                            </Box>
-                          </Td>
-                          { isWideVersion && <Td>{user.createdAt}</Td>}
-                          <Td>
-                            <Button
-                              as="a"
-                              colorScheme="purple"
-                              size="sm"
-                              leftIcon={<Icon as={RiPencilLine} fontSize="16" />}
-                              pr={!isWideVersion && 1}
-                            >
-                              { isWideVersion && 'Editar' }
-                            </Button>
-                          </Td>
-                        </Tr>
-                      );
-                    }) }
-                  </Tbody>
-                </Table>
+                    <Thead>
+                      <Tr>
+                        <Th px={["2", "3", "6"]} color="gray.300" width="8">
+                          <Checkbox colorScheme="pink" />
+                        </Th>
+                        <Th px={["2", "3", "6"]}>Usuários</Th>
+                        { isWideVersion && <Th>Data de cadastro</Th> }
+                        <Th width="8"></Th>
+                      </Tr>
+                    </Thead>
+                    <Tbody>
+                      { data.users.map(user => {
+                        return (
+                          <Tr key={user.id}>
+                            <Td px={["2", "3", "6"]}>
+                              <Checkbox colorScheme="pink" />
+                            </Td>
+                            <Td px={["2", "3", "6"]}>
+                              <Box>
+                                <Link color='purple.400' onMouseEnter={() => handlePrefetchUser(user.id)}>
+                                  <Text fontWeight="bold">{user.name}</Text>
+                                </Link>
+                                <Text fontSize="sm" color="gray.300">{user.email}</Text>
+                              </Box>
+                            </Td>
+                            { isWideVersion && <Td>{user.createdAt}</Td>}
+                            <Td>
+                              <Button
+                                as="a"
+                                colorScheme="purple"
+                                size="sm"
+                                leftIcon={<Icon as={RiPencilLine} fontSize="16" />}
+                                pr={!isWideVersion && 1}
+                              >
+                                { isWideVersion && 'Editar' }
+                              </Button>
+                            </Td>
+                          </Tr>
+                        );
+                      }) }
+                    </Tbody>
+                  </Table>
 
-                <Pagination
-                  onPageChange={setPage}
-                  totalCountOfRegisters={data.totalCount}
-                  currentPage={page}
-                />
+                  <Pagination
+                    onPageChange={setPage}
+                    totalCountOfRegisters={data.totalCount}
+                    currentPage={page}
+                  />
                 </>
               )
             }

@@ -83,7 +83,7 @@ export default function Dashboard() {
         >
           <Sidebar />
 
-          <SimpleGrid width='100%' maxWidth='1186' gap="4" minChildWidth="320px" alignItems="flex-start">
+          <SimpleGrid width='100%' maxWidth='1144' gap="4" minChildWidth="320px" alignItems="flex-start">
             <Box p={["6", "8"]} bg="gray.800" borderRadius={8} pb="4">
               <Text fontSize="lg" mb="4">Inscritos da semana</Text>
               <Chart type="area" height={168} options={options} series={series} />
