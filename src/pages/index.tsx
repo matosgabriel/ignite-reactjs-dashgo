@@ -35,7 +35,7 @@ export default function SignIn() {
   return (
     <>
     <Head>
-      <title>Home</title>
+      <title>Dashgo | Login</title>
     </Head>
     
     <Flex

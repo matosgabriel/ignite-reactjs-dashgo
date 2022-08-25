@@ -34,7 +34,7 @@ export default function UserList() {
   return (
     <>
       <Head>
-        <title>Users</title>
+        <title>Dashgo | Users</title>
       </Head>
       <Box>
         <Header />
