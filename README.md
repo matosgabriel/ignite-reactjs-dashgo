@@ -1,12 +1,10 @@
-<h1 align='center'>
-  Dashgo - Ignite (Rocketseat)
-</h1>
+# Dashgo - Ignite (Rocketseat)
 
 <div align='center'>
   <img src='./github_assets/web-preview.gif' alt='demo-web'>
 </div>
 
-<h2>Para testar o app localmente, siga os seguintes passos:</h2>
+## Para testar o app localmente, siga os seguintes passos:
 
 - Clonar o respositório
   ```bash
